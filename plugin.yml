@@ -1,0 +1,33 @@
+ name: MiniSigns
+ version: 1.0.1
+ description: Create minigame join signs
+ author: firecombat4
+ load: POSTWORLD
+ softdepend: [MobArena]
+ main: com.hotmail.steven.minisigns.MiniSigns
+ database: false
+ 
+ commands:
+   minisigns:
+     description: Base BiomeProtect command
+     aliases: [ms]
+     permission: biomecore.gm
+     usage: /gm creative|survival|adventure|spectator [player]
+ permissions:
+   inferno.*:
+     description: Gives access to all Inferno commands
+     children:
+       inferno.flagrate: true
+       inferno.burningdeaths: true
+       inferno.burningdeaths.others: true
+   inferno.flagrate:
+     description: Allows you to ignite yourself
+     default: true
+   inferno.burningdeaths:
+     description: Allows you to see how many times you have burned to death
+     default: true
+   inferno.burningdeaths.others:
+     description: Allows you to see how many times others have burned to death
+     default: op
+     children:
+       inferno.burningdeaths: true
