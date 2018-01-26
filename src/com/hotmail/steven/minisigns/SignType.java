@@ -2,6 +2,9 @@ package com.hotmail.steven.minisigns;
 
 public enum SignType {
 
-	MOBARENA
+	MOBARENA,
+	CUBERUN,
+	PARKOUR,
+	SPLEEF
 	
 }
